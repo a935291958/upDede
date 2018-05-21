@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-import os, re, shutil, time
+import os, re, shutil, time, random
 
 import chardet
 
@@ -103,6 +103,17 @@ def setGbk(str):
 # 设置文件编码
 def setCode(old, new):
     return str.decode(old).encode(new)
+
+
+# 生成随机字符串，输入需要几位数
+def salt(num):
+    seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    sa = []
+    for i in range(num):
+        sa.append(random.choice(seed))
+    salt = ''.join(sa)
+    return salt
+
 
 
 # 更新DEDE管理员目录下面的文件

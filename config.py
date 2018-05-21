@@ -14,26 +14,38 @@
 
 
 
-# 网站根目录
+# 网站根目录，以斜杠结尾
 #wwwroot = 'D:/'
-wwwroot = '/home/wwwroot/'
+wwwroot = '/www/wwwroot/'
 
 # 不要修复的网站根目录，注意区分大小写
 # notUp = ['Program Files (x86)','abc']
-notUp = ['abc', 'index', 'user']
+notUp = ['default']
 
 # 根目录下面的二级目录
 # sonDir = '/'  #没有的话这样写
-sonDir = '/web/'
+sonDir = '/'
 
 # 需要修复管理员的目录
-adminList = ['dede', 'gzch1200']
+adminList = ['dede']
 
-#修改漏洞文件前先备份原来的文件的备份目录
+#修改漏洞文件前先备份原来的文件的备份目录,斜杠结尾
 bakDir = './bak/'
+
+#存放一些修改结果的目录,斜杠结尾
+resDir = './res/'
 
 #是否删除织梦安装目录install
 isDelIns = True
+
+#设置data/common.inc.php文件属性设置为644（Linux/Unix）或只读（NT）
+isSetCommon = True
+
+#更改默认的DEDE目录，更改结果会保存在结果目录，日志也有记录
+# 第一个参数true表示更改
+# 第二个参数     1=>改为随机     2=>自定义目录名
+# 第三个参数     当第二个参数为1的时候，这里写int 表示生成几个随机字符串的。当第二个参数为2的时候，这里写自定义的后台目录
+upDedeDir = [True,1,8]
 
 
 
